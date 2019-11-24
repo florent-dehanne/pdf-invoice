@@ -9,7 +9,7 @@
     },
     "authors": [
         {
-            "name": "Attila Fulop",
+            "name": "Florent Dehanne",
             "homepage": "https://github.com/florent-dehanne"
         }
     ],
@@ -24,11 +24,6 @@
     },
     "autoload": {
         "psr-4": { "Fdehanne\\PdfInvoice\\": "src/" }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Fdehanne\\PdfInvoice\\Tests\\": "tests/"
-        }
     },
     "extra": {
         "branch-alias": {
