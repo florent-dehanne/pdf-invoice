@@ -29,7 +29,7 @@ might use it for payment or shipping information or any other content needed.
 ## Installation
 
 ```bash
-composer require fdehanne/pdf-invoice
+composer require florent-dehanne/pdf-invoice
 ```
 
 ## Examples
