@@ -1,10 +1,5 @@
 # PDF Invoice
 
-[![Travis Build Status](https://img.shields.io/travis/artkonekt/pdf-invoice.svg?style=flat-square)](https://travis-ci.org/artkonekt/pdf-invoice)
-[![Packagist Stable Version](https://img.shields.io/packagist/v/konekt/pdf-invoice.svg?style=flat-square&label=stable)](https://packagist.org/packages/konekt/pdf-invoice)
-[![Packagist downloads](https://img.shields.io/packagist/dt/konekt/pdf-invoice.svg?style=flat-square)](https://packagist.org/packages/konekt/pdf-invoice)
-[![GPL Software License](https://img.shields.io/badge/license-GPL-blue.svg?style=flat-square)](LICENSE)
-
 This is a streamlined fork of [pdf-invoicr](https://github.com/farjadtahir/pdf-invoicr).
 
 Changes:
@@ -34,7 +29,7 @@ might use it for payment or shipping information or any other content needed.
 ## Installation
 
 ```bash
-composer require konekt/pdf-invoice
+composer require fdehanne/pdf-invoice
 ```
 
 ## Examples
@@ -55,10 +50,10 @@ contain 2 products and a box on the bottom with VAT and total price. Then we add
 right before the output.
 
 ```php
-use Konekt\PdfInvoice\InvoicePrinter;
+  use Fdehanne\PdfInvoice\InvoicePrinter;
 
   $invoice = new InvoicePrinter();
-  
+
   /* Header settings */
   $invoice->setLogo("images/sample1.jpg");   //logo image path
   $invoice->setColor("#007fff");      // pdf color scheme
@@ -69,25 +64,25 @@ use Konekt\PdfInvoice\InvoicePrinter;
   $invoice->setDue(date('M dS ,Y',strtotime('+3 months')));    // Due Date
   $invoice->setFrom(array("Seller Name","Sample Company Name","128 AA Juanita Ave","Glendora , CA 91740"));
   $invoice->setTo(array("Purchaser Name","Sample Company Name","128 AA Juanita Ave","Glendora , CA 91740"));
-  
+
   $invoice->addItem("AMD Athlon X2DC-7450","2.4GHz/1GB/160GB/SMP-DVD/VB",6,0,580,0,3480);
   $invoice->addItem("PDC-E5300","2.6GHz/1GB/320GB/SMP-DVD/FDD/VB",4,0,645,0,2580);
   $invoice->addItem('LG 18.5" WLCD',"",10,0,230,0,2300);
   $invoice->addItem("HP LaserJet 5200","",1,0,1100,0,1100);
-  
+
   $invoice->addTotal("Total",9460);
   $invoice->addTotal("VAT 21%",1986.6);
   $invoice->addTotal("Total due",11446.6,true);
-  
+
   $invoice->addBadge("Payment Paid");
-  
+
   $invoice->addTitle("Important Notice");
-  
+
   $invoice->addParagraph("No item will be replaced or refunded if you don't have the invoice with you.");
-  
+
   $invoice->setFooternote("My Company Name Here");
-  
-  $invoice->render('example1.pdf','I'); 
+
+  $invoice->render('example1.pdf','I');
   /* I => Display on browser, D => Force Download, F => local path save, S => return document as string */
 ```
 
@@ -96,10 +91,10 @@ use Konekt\PdfInvoice\InvoicePrinter;
 ### Create Instances
 
 ```php
-use Konekt\PdfInvoice\InvoicePrinter;
+use Fdehanne\PdfInvoice\InvoicePrinter;
 
 // Default Param: Size: A4, Currency: $, Language: en
-$invoice = new InvoicePrinter($size, $currency, $language); 
+$invoice = new InvoicePrinter($size, $currency, $language);
 ```
 
 | Parameter | Type   | Accepts                          | Note                                                 |

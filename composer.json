@@ -1,16 +1,16 @@
 {
-    "name": "konekt/pdf-invoice",
+    "name": "florent-dehanne/pdf-invoice",
     "description": "Library to generate PDF invoices",
     "type": "library",
     "license": "GPL-2.0-or-later",
-    "keywords": ["invoice", "pdf", "konekt", "artkonekt"],
+    "keywords": ["invoice", "pdf"],
     "support": {
-        "source": "https://github.com/artkonekt/pdf-invoice"
+        "source": "https://github.com/florent-dehanne/pdf-invoice"
     },
     "authors": [
         {
             "name": "Attila Fulop",
-            "homepage": "https://github.com/fulopattila122"
+            "homepage": "https://github.com/florent-dehanne"
         }
     ],
     "require": {
@@ -23,11 +23,11 @@
         "phpunit/phpunit": "~5.0"
     },
     "autoload": {
-        "psr-4": { "Konekt\\PdfInvoice\\": "src/" }
+        "psr-4": { "Fdehanne\\PdfInvoice\\": "src/" }
     },
     "autoload-dev": {
         "psr-4": {
-            "Konekt\\PdfInvoice\\Tests\\": "tests/"
+            "Fdehanne\\PdfInvoice\\Tests\\": "tests/"
         }
     },
     "extra": {
